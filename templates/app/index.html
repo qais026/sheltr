@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html>
 
     <head>
@@ -7,8 +10,9 @@
 
     <body>
         <h1>Sheltr says...</h1>
-        hello world! <strong>{{ boldmessage }}</strong><br />
+        hello world! <strong></strong><br />
         <a href="/sheltr/about/">About</a><br />
+        <img src="{% static "img/sheltrLogo.jpg" %}" alt="Sheltr Logo" />
     </body>
 
 </html>
