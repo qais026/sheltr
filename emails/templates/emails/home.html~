@@ -1,0 +1,5 @@
+{% block title %}Contact Us - Welcome{% endblock title %}
+{% block content %}
+<h3>Welcome. Click on the link below to send email</h3>
+<p>Return <a href="/emails/email/send">home</a></p>
+{% endblock content %}
