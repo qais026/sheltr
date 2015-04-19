@@ -1,5 +1,10 @@
 {% block title %}Contact Us{% endblock title %}
 {% block content %}
+	<head>
+		<title>Sheltr Email</title>
+		<link href="email.css" rel="stylesheet" type="text/css"/>
+	</head>-
+	<body>
       <form method="post" action="/emails/email/send/">{% csrf_token %}
         <div class="name"><p>
           <label class="label">Name  <span class="required">*</span></label>
@@ -37,5 +42,7 @@
         <div class="button">
           <input class="submitform" type="submit" name="submitform" value="Send Message" />
         </div>
-      </form>	
+      </form>
+	</body>
+
     {% endblock content %}

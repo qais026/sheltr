@@ -93,9 +93,15 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'john.smith.dummy2@gmail.com'
-EMAIL_HOST_PASSWORD = 'qztuondoppphqtrf'
+#Dummy account user and password
+#EMAIL_HOST_USER = 'john.smith.dummy2@gmail.com'
+#EMAIL_HOST_PASSWORD = 'qztuondoppphqtrf'
+
+#login to gmail and setup 2-step verification code for the email_host_password
+EMAIL_HOST_USER = 'mapitherebmore@gmail.com'
+EMAIL_HOST_PASSWORD = 'tcufvtlcqtxzrrhi'
 EMAIL_PORT = 587
+#do not change email port unless gmail is not being used. G-mail should use port 587.
 EMAIL_USE_TLS = True
 
 # Static files (CSS, JavaScript, Images)
