@@ -11,8 +11,8 @@ class Category(models.Model):
 
 class Provider(models.Model):
     id = models.IntegerField(max_length=None, unique=True, primary_key=True)
-    provider_name = models.CharField(max_length=128, unique=True)
-    location_name = models.CharField(max_length=128, null=True)
+    provider_name = models.CharField(max_length=128)
+    location_name = models.CharField(max_length=128, unique=True, null=True)
     image = models.CharField(max_length=128, null=True)
     website = models.CharField(max_length=128, null=True)
     address1 = models.CharField(max_length=128)
