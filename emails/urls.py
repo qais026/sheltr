@@ -15,5 +15,5 @@ urlpatterns = patterns('',
 	
     url(r'^email/send/$', sendmail),
     url(r'^email/thankyou/$', TemplateView.as_view(template_name='emails/thankyou.html'), name='thankyou'),
-    url(r'^email/$', TemplateView.as_view(template_name='emails/email.html'), name='email'),
+    url(r'^email/$', TemplateView.as_view(template_name='emails/email2.html'), name='email'),
 )
