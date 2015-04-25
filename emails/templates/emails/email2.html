@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% block title %}{% endblock title %}
+{% block content %}
+
+{% load staticfiles %}
+
+<html class="no-js" lang="en">
+  <head>
+  <link rel="stylesheet" href="{% static "css/foundation.css" %}">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Sheltr++</title>
+    <link rel="stylesheet" href="{% static "css/foundation.css" %}" />
+    <script src="{% static "js/vendor/modernizr.js" %}"></script>
+  </head>
+
+  <body>
+
+  	<div class="row">
+      <div class="large-12 columns">
+        <h1>Contact Us</h1>
+      </div>
+    </div>
+
+    <div class="row">
+    	<div class = "large-8 columns">
+    		<div class="panel">
+    			<form method="post" action="/emails/email/send/">{% csrf_token %}
+    				<div class="row">
+    					<div class="large-12 columns">
+    						<h6><strong>Name</strong></h6>
+    					</div>
+			        <div class="large-6 columns">
+	            	<input name="firstname" type="text" placeholder="First" maxlength="255"/>
+	            </div>
+	            <div class="large-6 columns">
+	            	<input name="lastname" type="text" placeholder="Last" maxlength="255"/>
+	            </div>
+	            <div class="large-12 columns">
+	            	<label><strong>Email Address</strong></label>
+	            	<input name="email" type="text" maxlength="255"/>
+	            </div>
+	            <div class="large-12 columns">
+	            	<label><strong>Subject</strong></label>
+	            	<input name="subject" type="text" maxlength="255"/>
+	            </div>
+	            <!--<div class="botcheck">
+		          <label class="label">You must answer <u>YES</u> to the question below to<br /> approve sending this email.  <span class="required">*</span></label>
+		              Do you want to send me an email? <input name="botcheck" class="inputtext" type="text" maxlength="5" size="5" /></div> -->
+		          <div class="large-12 columns">
+	              <label><strong>Message</strong></label>
+	              <textarea name="message" rows="11" cols="45"></textarea>
+	            </div>
+	            <div class="large-12 columns">
+	            	<a href="/emails/email/thankyou" aria-label="submit form" class="small radius button">Send Message</a><br/> <!-- I don't know if this button actually saves the information -->
+	            </div>
+			      </div>
+    			</form>
+    		</div>
+    	</div>
+    </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  </body>
+
+</html>
+
+{% endblock content %}
