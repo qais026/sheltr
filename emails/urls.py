@@ -8,12 +8,12 @@ from emails.views import sendmail
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', TemplateView.as_view(template_name='emails/home.html'), name='home'),
+    url(r'^$', TemplateView.as_view(template_name='emails/email2.html'), name='emails2'),
     # url(r'^blog/', include('blog.urls')),
 	
     #url(r'^admin/', include(admin.site.urls)),
 	
     url(r'^email/send/$', sendmail),
-    url(r'^email/thankyou/$', TemplateView.as_view(template_name='emails/thankyou.html'), name='thankyou'),
-    url(r'^email/$', TemplateView.as_view(template_name='emails/email2.html'), name='email'),
+    url(r'^thankyou/$', TemplateView.as_view(template_name='emails/thankyou2.html'), name='thankyou'),
+    # url(r'^email/$', TemplateView.as_view(template_name='emails/email2.html'), name='email'),
 )
