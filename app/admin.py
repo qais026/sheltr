@@ -25,4 +25,3 @@ admin.site.register(Category)
 # longer true for provider_name in models
 admin.site.register(Provider, ProviderAdmin)
 # Register your models here.
-

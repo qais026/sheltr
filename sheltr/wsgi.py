@@ -16,7 +16,6 @@ application = get_wsgi_application()
 
 # Via Herku at https://devcenter.heroku.com/articles/getting-started-with-django
 # use $ pip -install dj_static to get this to function properly ~ Channing
-from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
 
 application = Cling(get_wsgi_application())
