@@ -10,17 +10,19 @@ class Category(models.Model):
         return self.title
 
 class Provider(models.Model):
+    # blank=True necessary to allow for incomplete data entry edits
+    # makes it so the field is NOT required
     id = models.IntegerField(max_length=None, unique=True, primary_key=True)
     provider_name = models.CharField(max_length=128)
-    location_name = models.CharField(max_length=128, null=True)
-    image = models.CharField(max_length=128, null=True)
-    website = models.CharField(max_length=128, null=True)
-    address1 = models.CharField(max_length=128)
-    address2 = models.CharField(max_length=128)
-    city = models.CharField(max_length=128)
-    state = models.CharField(max_length=128)
-    zipcode = models.CharField(max_length=128)
-    categories = models.ManyToManyField(Category)
+    location_name = models.CharField(max_length=128, null=True, blank=True)
+    image = models.CharField(max_length=128, null=True, blank=True)
+    website = models.CharField(max_length=128, null=True, blank=True)
+    address1 = models.CharField(max_length=128, blank=True)
+    address2 = models.CharField(max_length=128, blank=True)
+    city = models.CharField(max_length=128, blank=True)
+    state = models.CharField(max_length=128, blank=True)
+    zipcode = models.CharField(max_length=128, blank=True)
+    categories = models.ManyToManyField(Category, blank=True)
 
     def __unicode__(self):
         return self.provider_name
