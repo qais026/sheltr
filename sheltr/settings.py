@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'import_export',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,7 +84,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EDT'
 
 USE_I18N = True
 
