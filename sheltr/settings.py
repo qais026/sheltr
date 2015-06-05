@@ -45,8 +45,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'app',
-    'import_export',
+    'emails',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -75,7 +76,6 @@ DATABASES = {
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
-
     }
 }
 
@@ -84,7 +84,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'EDT'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -93,16 +93,22 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'john.smith.dummy2@gmail.com'
-EMAIL_HOST_PASSWORD = 'qztuondoppphqtrf'
+#Dummy account user and password
+#EMAIL_HOST_USER = 'john.smith.dummy2@gmail.com'
+#EMAIL_HOST_PASSWORD = 'qztuondoppphqtrf'
+
+#login to gmail and setup 2-step verification code for the email_host_password
+EMAIL_HOST_USER = 'mapitherebmore@gmail.com'
+EMAIL_HOST_PASSWORD = 'tcufvtlcqtxzrrhi'
 EMAIL_PORT = 587
+#do not change email port unless gmail is not being used. G-mail should use port 587.
 EMAIL_USE_TLS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_PATH = os.path.join(BASE_DIR,'static')
-
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_root")
 STATIC_URL = '/static/' # You may find this is already defined as such.
 
 STATICFILES_DIRS = (
@@ -120,3 +126,5 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
