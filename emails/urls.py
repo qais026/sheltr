@@ -10,8 +10,7 @@ urlpatterns = patterns('',
 	
 	#Home page for contact page based on template found in home.html
 	url(r'^$', TemplateView.as_view(template_name='emails/home.html'), name='home'),
-	#
-    #url(r'^email/send/$', sendmail),
+	
     url(r'^email/thankyou/$', TemplateView.as_view(template_name='emails/thankyou.html'), name='thankyou'),
     url(r'^email/$', sendmail, name='email'),
 )
