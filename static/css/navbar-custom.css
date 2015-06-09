@@ -1,0 +1,16 @@
+.navbar-default {
+    background-color: #97EBFC;
+    border-color: #009FBF;
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: gray;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}

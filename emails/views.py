@@ -21,8 +21,7 @@ def sendmail(request):
 	if form.is_valid():
 		instance = form.save(commit=False)
 		# instance.save()
-		firstname = form.cleaned_data['first_name']
-		lastname = form.cleaned_data['last_name']
+		name = form.cleaned_data['your_name']
 		email = form.cleaned_data['email']
 		subject = form.cleaned_data['subject']
 		message = form.cleaned_data['message']

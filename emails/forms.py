@@ -20,7 +20,7 @@ class EmailForm(forms.ModelForm):
 	#want to be shown on the form.
 	class Meta:
 		model = EmailSignUp
-		fields = ['first_name', 'last_name', 'email', 'subject', 'message']
+		fields = ['your_name', 'email', 'subject', 'message']
 
 	#This cleans up the email field after the form is submitted. If
 	#the fild does not meet certain critera, you can alter the input
