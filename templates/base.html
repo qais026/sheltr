@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<head>
+	{% include 'snippets/bootstrapcss.html' %}
+	<title>Sheltr++|{% block title %}{% endblock %}</title>
+	<link rel="shortcut icon" href="{% static 'icon/sheltricon.ico' %}"/>
+</head>
+
+<body>
+	{% include 'navbar.html' %}
+		{% block content %}
+		{% endblock %}
+	{% include 'snippets/bootstrapjs.html' %}
+</body>
+

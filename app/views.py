@@ -12,3 +12,7 @@ def index(request):
     # Note that the first parameter is the template we wish to use.
 
     return render(request, 'app/index.html', context_dict)
+
+def about(request):
+	context = {}
+	return render(request, 'sheltr/about.html', context)
