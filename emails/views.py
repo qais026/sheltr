@@ -25,7 +25,7 @@ def sendmail(request):
 		email = form.cleaned_data['email']
 		subject = form.cleaned_data['subject']
 		message = form.cleaned_data['message']
-		fullemail = message + " " + firstname + " " + lastname + " " + "<" + email + ">"
+		fullemail = message + " " + name + " " + "<" + email + ">"
 		#Need to change receiver email
 		send_mail(subject, fullemail, 'mapitherebmore@gmail.com' , ['mapitherebmore@gmail.com'], fail_silently = False)
 		return HttpResponseRedirect('/emails/email/thankyou/')
