@@ -48,6 +48,8 @@ INSTALLED_APPS = (
     'crispy_forms',
     'app',
     'emails',
+    'import_export',
+    'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -128,3 +130,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://localhost:8983/solr'
+    },
+}
