@@ -11,11 +11,9 @@
 
     <body>
         {% block content %}
-        <h1>Sheltr says...</h1>
-        hello world! <strong></strong><br />
-        <a href="/about/">About</a><br />
-        <a href="/emails/email">Contact Us</a><br />
-        <img src="{% static "img/sheltrLogo.jpg" %}" alt="Sheltr Logo" />
+        <div class="container">
+            <img src="{% static "img/sheltrLogo.jpg" %}" alt="Sheltr Logo" />
+        </div>
         {% endblock %}
     </body>
 

@@ -1,6 +1,6 @@
 .navbar-default {
-    background-color: #5E5E5E;
-    border-color: black;
+    background-color: #337AB7;
+    border-color: transparent;
 }
 .navbar-default .navbar-brand {
     color: white;
@@ -13,4 +13,17 @@
 
 .navbar-default .navbar-nav > li > a {
     color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0px;
+
+  width: 100%;
+  padding: 0px;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  border-color: transparent;
+  background-color: #337AB7;
 }

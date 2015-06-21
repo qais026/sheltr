@@ -9,5 +9,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^app/', include('app.urls')),
 	url(r'^emails/', include('emails.urls')),
-	url(r'^about/', 'app.views.about', name='about')
+	url(r'^about/', 'app.views.about', name='about'),
+	url(r'^search/', include('haystack.urls')),
 )
