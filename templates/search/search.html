@@ -24,11 +24,18 @@
         </table>
 
         {% if query %}
-            <h3>Results</h3>
+        <h3>Results</h3>
+        <div class="results_pane col-sm-6">
+            
 
             {% for result in page.object_list %}
                 <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.provider_name }}</a>
+                    <p><h4>{{ result.object.provider_name }}</h4></p>
+                    <p><b>Address: </b></p>
+                    <p>{{ result.object.address1 }} </p>
+                    <p>{{ result.object.address2 }} </p>
+                    <p><b>Website:</b> <a href="http://{{ result.object.website }}">{{ result.object.website }}</a></p>
+                </br>
                 </p>
             {% empty %}
                 <p>No results found.</p>
@@ -43,6 +50,7 @@
             {% endif %}
         {% else %}
             {# Show some example queries to run, maybe query syntax, something else? #}
+        </div>
         {% endif %}
     </form>
 </div>
