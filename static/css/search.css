@@ -1,0 +1,5 @@
+.results_pane {
+	overflow-x:hidden;
+	overflow-y:scroll;
+	max-height: 70vh;
+}
