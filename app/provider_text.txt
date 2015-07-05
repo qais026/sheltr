@@ -1,2 +1,0 @@
-{{ object.provider_name }}
-{{ object.location_name }}

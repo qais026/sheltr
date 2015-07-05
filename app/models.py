@@ -9,6 +9,9 @@ class Category(models.Model):
     def __unicode__(self):              
         return self.category_name
 
+    def __str__(self):
+        return self.category_name
+
 class Provider(models.Model):
     # blank=True necessary to allow for incomplete data entry edits
     # makes it so the field is NOT required

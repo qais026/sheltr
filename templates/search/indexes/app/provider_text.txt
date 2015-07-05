@@ -1,2 +1,2 @@
 {{ object.provider_name }}
-{{ object.provider_location }}
+{{ object.address1 }}
