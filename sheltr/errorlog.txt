@@ -1,0 +1,146 @@
+errorlog
+
+Jul 19 07:15:06 sheltrtest heroku/slug-compiler:  Slug compilation started 
+Jul 19 07:15:06 sheltrtest heroku/slug-compiler:  Slug compilation finished 
+Jul 19 07:15:06 sheltrtest heroku/api:  Deploy fdff1e4 by qais026@gmail.com 
+Jul 19 07:15:06 sheltrtest heroku/api:  Release v25 created by qais026@gmail.com 
+Jul 19 07:15:12 sheltrtest heroku/web.1:  State changed from crashed to starting 
+Jul 19 07:15:16 sheltrtest heroku/web.1:  Starting process with command `gunicorn sheltr.wsgi --log-file -` 
+Jul 19 07:15:20 sheltrtest app/web.1:  [2015-07-19 14:15:19 +0000] [3] [INFO] Starting gunicorn 19.1.1 
+Jul 19 07:15:20 sheltrtest app/web.1:  [2015-07-19 14:15:19 +0000] [3] [INFO] Listening at: http://0.0.0.0:59459 (3) 
+Jul 19 07:15:20 sheltrtest app/web.1:  [2015-07-19 14:15:19 +0000] [10] [INFO] Booting worker with pid: 10 
+Jul 19 07:15:20 sheltrtest app/web.1:  [2015-07-19 14:15:19 +0000] [3] [INFO] Using worker: sync 
+Jul 19 07:15:20 sheltrtest app/web.1:  [2015-07-19 14:15:19 +0000] [9] [INFO] Booting worker with pid: 9 
+Jul 19 07:15:20 sheltrtest heroku/web.1:  State changed from starting to up 
+Jul 19 07:15:21 sheltrtest app/web.1:  [2015-07-19 14:15:20 +0000] [10] [ERROR] Exception in worker process: 
+Jul 19 07:15:21 sheltrtest app/web.1:  Traceback (most recent call last): 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker 
+Jul 19 07:15:21 sheltrtest app/web.1:      worker.init_process() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.wsgi = self.app.wsgi() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.callable = self.load() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load 
+Jul 19 07:15:21 sheltrtest app/web.1:      return self.load_wsgiapp() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp 
+Jul 19 07:15:21 sheltrtest app/web.1:      return util.import_app(self.app_uri) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(module) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/sheltr/wsgi.py", line 14, in <module> 
+Jul 19 07:15:21 sheltrtest app/web.1:      application = get_wsgi_application() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application 
+Jul 19 07:15:21 sheltrtest app/web.1:      django.setup() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 21, in setup 
+Jul 19 07:15:21 sheltrtest app/web.1:      apps.populate(settings.INSTALLED_APPS) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate 
+Jul 19 07:15:21 sheltrtest app/web.1:      app_config = AppConfig.create(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/config.py", line 87, in create 
+Jul 19 07:15:21 sheltrtest app/web.1:      module = import_module(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(name) 
+Jul 19 07:15:21 sheltrtest app/web.1:  ImportError: No module named pysolrhaystack 
+Jul 19 07:15:21 sheltrtest app/web.1:  Traceback (most recent call last): 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker 
+Jul 19 07:15:21 sheltrtest app/web.1:      worker.init_process() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.wsgi = self.app.wsgi() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.callable = self.load() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load 
+Jul 19 07:15:21 sheltrtest app/web.1:      return self.load_wsgiapp() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp 
+Jul 19 07:15:21 sheltrtest app/web.1:      return util.import_app(self.app_uri) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(module) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/sheltr/wsgi.py", line 14, in <module> 
+Jul 19 07:15:21 sheltrtest app/web.1:      application = get_wsgi_application() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application 
+Jul 19 07:15:21 sheltrtest app/web.1:      django.setup() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 21, in setup 
+Jul 19 07:15:21 sheltrtest app/web.1:      apps.populate(settings.INSTALLED_APPS) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate 
+Jul 19 07:15:21 sheltrtest app/web.1:      app_config = AppConfig.create(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/config.py", line 87, in create 
+Jul 19 07:15:21 sheltrtest app/web.1:      module = import_module(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(name) 
+Jul 19 07:15:21 sheltrtest app/web.1:  ImportError: No module named pysolrhaystack 
+Jul 19 07:15:21 sheltrtest app/web.1:  [2015-07-19 14:15:20 +0000] [10] [INFO] Worker exiting (pid: 10) 
+Jul 19 07:15:21 sheltrtest app/web.1:  [2015-07-19 14:15:20 +0000] [9] [ERROR] Exception in worker process: 
+Jul 19 07:15:21 sheltrtest app/web.1:  Traceback (most recent call last): 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker 
+Jul 19 07:15:21 sheltrtest app/web.1:      worker.init_process() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.wsgi = self.app.wsgi() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.callable = self.load() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load 
+Jul 19 07:15:21 sheltrtest app/web.1:      return self.load_wsgiapp() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp 
+Jul 19 07:15:21 sheltrtest app/web.1:      return util.import_app(self.app_uri) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(module) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/sheltr/wsgi.py", line 14, in <module> 
+Jul 19 07:15:21 sheltrtest app/web.1:      application = get_wsgi_application() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application 
+Jul 19 07:15:21 sheltrtest app/web.1:      django.setup() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 21, in setup 
+Jul 19 07:15:21 sheltrtest app/web.1:      apps.populate(settings.INSTALLED_APPS) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate 
+Jul 19 07:15:21 sheltrtest app/web.1:      app_config = AppConfig.create(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/config.py", line 87, in create 
+Jul 19 07:15:21 sheltrtest app/web.1:      module = import_module(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(name) 
+Jul 19 07:15:21 sheltrtest app/web.1:  ImportError: No module named pysolrhaystack 
+Jul 19 07:15:21 sheltrtest app/web.1:  Traceback (most recent call last): 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker 
+Jul 19 07:15:21 sheltrtest app/web.1:      worker.init_process() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 114, in init_process 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.wsgi = self.app.wsgi() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 66, in wsgi 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.callable = self.load() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load 
+Jul 19 07:15:21 sheltrtest app/web.1:      return self.load_wsgiapp() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp 
+Jul 19 07:15:21 sheltrtest app/web.1:      return util.import_app(self.app_uri) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 356, in import_app 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(module) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/sheltr/wsgi.py", line 14, in <module> 
+Jul 19 07:15:21 sheltrtest app/web.1:      application = get_wsgi_application() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application 
+Jul 19 07:15:21 sheltrtest app/web.1:      django.setup() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/__init__.py", line 21, in setup 
+Jul 19 07:15:21 sheltrtest app/web.1:      apps.populate(settings.INSTALLED_APPS) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate 
+Jul 19 07:15:21 sheltrtest app/web.1:      app_config = AppConfig.create(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/django/apps/config.py", line 87, in create 
+Jul 19 07:15:21 sheltrtest app/web.1:      module = import_module(entry) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/importlib/__init__.py", line 37, in import_module 
+Jul 19 07:15:21 sheltrtest app/web.1:      __import__(name) 
+Jul 19 07:15:21 sheltrtest app/web.1:  ImportError: No module named pysolrhaystack 
+Jul 19 07:15:21 sheltrtest app/web.1:  [2015-07-19 14:15:20 +0000] [9] [INFO] Worker exiting (pid: 9) 
+Jul 19 07:15:21 sheltrtest app/web.1:  Traceback (most recent call last): 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/bin/gunicorn", line 11, in <module> 
+Jul 19 07:15:21 sheltrtest app/web.1:      sys.exit(run()) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run 
+Jul 19 07:15:21 sheltrtest app/web.1:      WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 185, in run 
+Jul 19 07:15:21 sheltrtest app/web.1:      super(Application, self).run() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 71, in run 
+Jul 19 07:15:21 sheltrtest app/web.1:      Arbiter(self).run() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 196, in run 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.halt(reason=inst.reason, exit_status=inst.exit_status) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 292, in halt 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.stop() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 343, in stop 
+Jul 19 07:15:21 sheltrtest app/web.1:      time.sleep(0.1) 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 209, in handle_chld 
+Jul 19 07:15:21 sheltrtest app/web.1:      self.reap_workers() 
+Jul 19 07:15:21 sheltrtest app/web.1:    File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers 
+Jul 19 07:15:21 sheltrtest app/web.1:      raise HaltServer(reason, self.WORKER_BOOT_ERROR) 
+Jul 19 07:15:21 sheltrtest app/web.1:  gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3> 
+Jul 19 07:15:22 sheltrtest heroku/web.1:  Process exited with status 1 
+Jul 19 07:15:22 sheltrtest heroku/web.1:  State changed from up to crashed 
+Jul 19 07:15:26 sheltrtest heroku/router:  at=error code=H10 desc="App crashed" method=GET path="/" host=sheltrtest.herokuapp.com request_id=353835a0-1c5e-45d2-a978-8a0006fd485f fwd="73.212.247.107" dyno=web.1 connect=5001ms service= status=503 bytes= 
+Jul 19 07:15:27 sheltrtest heroku/router:  at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sheltrtest.herokuapp.com request_id=fbfb040d-627f-4902-a2e9-0190f43811da fwd="73.212.247.107" dyno= connect= service= status=503 bytes= 

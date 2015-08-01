@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pysolr',
     'haystack',
     'crispy_forms',
     'import_export',
@@ -131,10 +132,12 @@ ALLOWED_HOSTS = ['*']
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
+HAYSTACK_URL      = os.environ.get('WEBSOLR_URL', '')
+
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://127.0.0.1:8983/solr'
+        'URL': HAYSTACK_URL
         # ...or for multicore...
         # 'URL': 'http://127.0.0.1:8983/solr/mysite',
     },
