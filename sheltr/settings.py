@@ -45,7 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pysolr'
+    'pysolr',
     'haystack',
     'crispy_forms',
     'import_export',
