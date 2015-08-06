@@ -51,6 +51,8 @@ INSTALLED_APPS = (
     'import_export',
     'app',
     'emails',
+    'import_export',
+    'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
