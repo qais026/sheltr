@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
+
 {% load staticfiles %}
 
 <html>
 
     <head>
-        <title>{% block title %}Home{% endblock %}</title>
-        
+        <title>Sheltr</title>
     </head>
 
     <body>
-        {% block content %}
-        <div class="container">
-            <img src="{% static "img/sheltrLogo.jpg" %}" alt="Sheltr Logo" />
-        </div>
-        {% endblock %}
+        <h1>Sheltr says...</h1>
+        hello world! <strong></strong><br />
+        <a href="/sheltr/about/">About</a><br />
+        <a href="/emails/email">Contact Us</a><br />
+        <img src="{% static "img/sheltrLogo.jpg" %}" alt="Sheltr Logo" />
     </body>
 
 </html>

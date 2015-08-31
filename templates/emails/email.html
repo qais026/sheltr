@@ -1,11 +1,12 @@
-{% extends 'base.html' %}
+{% block title %}{% endblock title %}
 {% load crispy_forms_tags %}
 {% load staticfiles %}
-
+{% block content %}
 	<head>
-		{% block title %}Contact Us{% endblock %}
+		<title>Sheltr Email</title>
+    <link href= "{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 	</head>
-  {% block content %}
+  {% include 'navbar.html' %}
 	<body>
     <div class="container">
       <h1>Contact Us</h1>
@@ -57,4 +58,4 @@
       </form>-->
 	</body>
 
-  {% endblock content %}
+    {% endblock content %}

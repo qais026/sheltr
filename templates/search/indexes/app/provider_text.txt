@@ -1,2 +1,3 @@
-{{ object.provider_name }}
-{{ object.provider_location }}
+{{ object.title }}
+{{ object.user.get_full_name }}
+{{ object.body }}
